@@ -1,0 +1,230 @@
+/* ========== √ÀŒ¡¿À‹Õ€≈ —“»À» ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f0f4f8;
+    color: #1e2a3a;
+    line-height: 1.5;
+}
+
+/* ========== HEADER ========== */
+.hospital-header {
+    background: linear-gradient(135deg, #0b3b5f, #1b5a7a);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.header-info {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+/* ========== MAIN LAYOUT ========== */
+.main-layout {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+    width: 280px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #1e2a3a;
+    text-decoration: none;
+    font-weight: 500;
+    border-left: 4px solid transparent;
+    transition: all 0.2s;
+}
+
+    .sidebar-nav li a:hover {
+        background-color: #e6f0fa;
+        border-left-color: #1b5a7a;
+    }
+
+    .sidebar-nav li a.active {
+        background-color: #e0f0ff;
+        border-left-color: #0b3b5f;
+        color: #0b3b5f;
+        font-weight: 600;
+    }
+
+.sidebar-contacts {
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    background: #f9fbfd;
+}
+
+    .sidebar-contacts h4 {
+        margin-bottom: 0.75rem;
+        color: #0b3b5f;
+    }
+
+    .sidebar-contacts p {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
+    flex: 1;
+}
+
+.welcome-banner {
+    background: linear-gradient(120deg, #e0f2fe, #b8e1fc);
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+    .welcome-banner h2 {
+        color: #0b3b5f;
+        margin-bottom: 0.5rem;
+    }
+
+.departments h3, .doctors h3, .schedule h3 {
+    margin-bottom: 1rem;
+    color: #0b3b5f;
+    font-size: 1.3rem;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.dept-card {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+    .dept-card:hover {
+        background: #0b3b5f;
+        color: white;
+        transform: translateY(-3px);
+    }
+
+.doctors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.doctor-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.schedule-table {
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+    .schedule-table th, .schedule-table td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .schedule-table th {
+        background-color: #1b5a7a;
+        color: white;
+    }
+
+/* ========== FOOTER ========== */
+.hospital-footer {
+    background-color: #0b2b3b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.footer-container p:first-child {
+    margin-bottom: 0.5rem;
+}
+
+/* ========== ¿ƒ¿œ“»¬ÕŒ—“‹ ========== */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
